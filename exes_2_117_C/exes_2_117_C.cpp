@@ -2,8 +2,10 @@
 using namespace std;
 
 int nauval[17];
+int lowerbound = 0;
+int upperbound = n - 1;
+int mid = (lowerbound + upperbound) / 2;
 int n;
-int i;
 
 void input()
 {
@@ -21,7 +23,7 @@ void input()
 	cout << "\n-------------------\n";
 	cout << " memasukkan elemen array \n";
 	cout << "---------------------\n";
-	for (i = 0; i < n; i++)
+	for (int i = 0; i < n; i++)
 	{
 		cout << "<" << (i + 1) << "> ";
 		cin >> nauval[i];
@@ -41,7 +43,7 @@ void Display()
 		cin >> item;
 
 		ctr = 0;
-		for (i = 0; i < n; i++)							
+		for (int i = 0; i < n; i++)							
 		{
 			ctr++;
 			if (nauval[i] == item)								
@@ -51,7 +53,7 @@ void Display()
 			}
 		}
 
-		if (i == n)
+		if (n == n)
 			cout << "\n" << item << " Not Found\n";
 		cout << "\nJumlah perbandingan: " << ctr << endl;
 
